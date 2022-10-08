@@ -10,10 +10,10 @@ class Customer(models.Model):
 class Bill(models.Model):
 
     class Bill_products(models.TextChoices):
-        COOLPRODUCT = 'CP', _('Cool Product')
-        YAYPRODUCT = 'YP', _('Yay Product')
+        COOLPRODUCT = 'CP', ('Cool Product')
+        YAYPRODUCT = 'YP', ('Yay Product')
 
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     product = models.CharField(max_length=2,choices=Bill_products.choices,)
-    price = models.IntegerField(min=0)
-    discount = models.IntegerField(min=0,max=100, default=0)
+    price = models.IntegerField()
+    discount = models.IntegerField()
