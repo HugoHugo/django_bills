@@ -11,6 +11,11 @@ python manage.py runserver
 curl --location --request GET 'http://127.0.0.1:8000/'
 ```
 
+Expect this response for the basic index call:
+```
+{"metadata": {}, "content": "Welcome to bills app"}
+```
+
 ## DB
 
 Since this is an example project it uses SQL Lite as its database. Be careful, this is not a suitable DBMS for production. 
